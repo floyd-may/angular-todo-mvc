@@ -1,0 +1,4 @@
+*.js text eol=crlf
+*.html text eol=crlf
+*.css text eol=crlf
+
