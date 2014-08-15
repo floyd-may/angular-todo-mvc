@@ -1,4 +1,4 @@
-﻿describe('entryController', function () {
+﻿describe('todoController', function () {
     var $scope;
 
     // declare that we're mocking the todo-mvc module
@@ -7,7 +7,7 @@
     beforeEach(inject(function ($rootScope, $controller) {
         $scope = $rootScope.$new();
 
-        $controller('entryController', { $scope: $scope });
+        $controller('todoController', { $scope: $scope });
     }));
 
     it('should not explode', function () {
