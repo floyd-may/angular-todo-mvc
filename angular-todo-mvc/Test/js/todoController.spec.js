@@ -10,7 +10,10 @@
         $controller('todoController', { $scope: $scope });
     }));
 
-    it('should not explode', function () {
-        expect(1).toBe(1);
+    describe('todo item capture', function () {
+        it('should have a createTodo function', function () {
+            expect($scope.createTodo).toEqual(jasmine.any(Function));
+        });
     });
+    
 });
