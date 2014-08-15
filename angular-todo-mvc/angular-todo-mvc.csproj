@@ -121,9 +121,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\base.css" />
     <Content Include="Content\html\Todo.html" />
+    <Content Include="Content\html\_example.html" />
     <Content Include="Content\js\app.js" />
-    <Content Include="Content\js\entryController.js" />
+    <Content Include="Content\js\todoController.js" />
     <Content Include="Global.asax" />
     <Content Include="Test\css\jasmine.css" />
     <Content Include="Test\css\jasmine_favicon.png" />
