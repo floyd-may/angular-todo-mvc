@@ -31,6 +31,16 @@
 
             expect($scope.newTodo).toEqual('');
         });
+
+        it('should not modify todos when createTodo is called with empty text present', function () {
+            $scope.newTodo = 'asdf';
+            
+            $scope.createTodo();
+            // assuming that newTodo is cleared, call again
+            $scope.createTodo();
+
+            expect($scope.todos).toEqual([{ title: 'asdf' }]);
+        });
     });
     
 });
