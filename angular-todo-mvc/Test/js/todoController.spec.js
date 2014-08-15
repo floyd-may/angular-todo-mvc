@@ -41,6 +41,23 @@
 
             expect($scope.todos).toEqual([{ title: 'asdf' }]);
         });
+
+        it('should append to todos array when subsequent items are added', function () {
+            $scope.newTodo = 'todo 1';
+
+            $scope.createTodo();
+
+            $scope.newTodo = 'todo 2';
+
+            $scope.createTodo();
+
+            var expectedTodos = [
+                { title: 'todo 1' },
+                { title: 'todo 2' }
+            ];
+
+            expect($scope.todos).toEqual(expectedTodos);
+        });
     });
     
 });
