@@ -23,6 +23,14 @@
 
             expect($scope.todos).toEqual([{ title: todoText }]);
         });
+
+        it('should clear newTodo when createTodo is called', function () {
+            $scope.newTodo = 'Sample Todo Item';
+            
+            $scope.createTodo();
+
+            expect($scope.newTodo).toEqual('');
+        });
     });
     
 });
