@@ -18,11 +18,11 @@
             </form>
         </header>
         <section id="main" style="display: none;">
-            <ul id="todo-list">
+            <ul id="todo-list" ng-repeat="todo in todos">
                 <li>
                     <div class="view">
                         <input class="toggle" type="checkbox" ng-model="todo.completed">
-                        <label ng-dblclick="editTodo(todo)">(sample title)</label>
+                        <label ng-dblclick="editTodo(todo)">{{todo.title}}</label>
                         <button class="destroy" ng-click="removeTodo(todo)"></button>
                     </div>
                 </li>
