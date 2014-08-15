@@ -14,6 +14,15 @@
         it('should have a createTodo function', function () {
             expect($scope.createTodo).toEqual(jasmine.any(Function));
         });
+
+        it('should create a todo item on the todos array when createTodo is called', function () {
+            var todoText = 'Sample Todo Item';
+            $scope.newTodo = todoText;
+
+            $scope.createTodo();
+
+            expect($scope.todos).toEqual([{ title: todoText }]);
+        });
     });
     
 });
