@@ -130,7 +130,7 @@
     <Content Include="Test\css\jasmine.css" />
     <Content Include="Test\css\jasmine_favicon.png" />
     <Content Include="Test\html\SpecRunner.html" />
-    <Content Include="Test\js\entryController.spec.js" />
+    <Content Include="Test\js\todoController.spec.js" />
     <Content Include="Test\lib\angular-mocks.js" />
     <Content Include="Test\lib\boot.js" />
     <Content Include="Test\lib\console.js" />
