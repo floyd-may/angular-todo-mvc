@@ -1,6 +1,5 @@
-(function (window) {
-	'use strict';
-
-	// Your starting point. Enjoy the ride!
-
-})(window);
+angular.module('todo-mvc', []).controller('todos', [
+'$scope',
+function($scope){
+  
+}]);
