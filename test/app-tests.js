@@ -8,20 +8,32 @@ describe('tests for todo-mvc app', function(){
 
     var $controller = $injector.get('$controller');
 
-    createController = function(){
-      $controller('todos', { $scope: $scope });
-    };
+    $controller('todos', { $scope: $scope });
 
   }));
 
-  it('should display todo when user hits enter', function(){
-      createController();
+  describe('adding a new todo (via addNewTodo())', function(){
 
-      $scope.newTodo = 'todo text';
+      it('should display todo when user hits enter', function(){
 
-      $scope.addNewTodo();
+          $scope.newTodo = 'todo text';
 
-      expect($scope.todos).toEqual([{text: 'todo text'}]);
+          $scope.addNewTodo();
 
-  });
+          expect($scope.todos).toEqual([{text: 'todo text'}]);
+      });
+
+      it('should add a new element to an existing list of todos', function(){
+          $scope.todos = [{text: 'something'}];
+
+          $scope.newTodo = 'todo text';
+
+          $scope.addNewTodo();
+
+          expect($scope.todos).toEqual([
+              {text: 'something'},
+              {text: 'todo text'}
+          ]);
+      });
+    });
 });
