@@ -7,6 +7,8 @@ function($scope){
         $scope.todos.push({
             text: $scope.newTodo
         });
+
+        $scope.newTodo = '';
     };
 
 }]);
