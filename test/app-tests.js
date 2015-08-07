@@ -14,8 +14,12 @@ describe('tests for todo-mvc app', function(){
 
   }));
 
-  it('should exist', function(){
-    createController();
-    expect(1).toBe(1);
+  it('should display todo when user hits enter', function(){
+      $scope.newTodo = 'todo text';
+
+      $scope.addNewTodo();
+
+      expect($scope.todos).toEqual([{text: 'todo text'}]);
+
   });
 });
