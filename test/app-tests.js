@@ -35,5 +35,13 @@ describe('tests for todo-mvc app', function(){
               {text: 'todo text'}
           ]);
       });
+
+      it('should clear the input box after adding', function(){
+          $scope.newTodo = 'something';
+
+          $scope.addNewTodo();
+
+          expect($scope.newTodo).toEqual('');
+      });
     });
 });
