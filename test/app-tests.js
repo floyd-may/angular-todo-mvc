@@ -44,4 +44,23 @@ describe('tests for todo-mvc app', function(){
           expect($scope.newTodo).toEqual('');
       });
     });
+
+  describe('items remaining count', function(){
+      it('should show count of items remaining', function(){
+          $scope.todos = [
+            {completed: true},
+            {completed: false},
+            {completed: false},
+            {completed: true},
+            {completed: true}
+          ];
+
+          $scope.$digest();
+
+          expect($scope.uncompletedCount)
+            .toBe(2);
+
+
+      });
+  });
 });
