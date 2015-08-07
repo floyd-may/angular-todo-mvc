@@ -15,6 +15,8 @@ describe('tests for todo-mvc app', function(){
   }));
 
   it('should display todo when user hits enter', function(){
+      createController();
+
       $scope.newTodo = 'todo text';
 
       $scope.addNewTodo();
